@@ -1730,7 +1730,8 @@ ul.panel-tabs > li > a > p {
 // -------------END Active Vehicle Widget----------------
 
 
-// ------------- START Vehicle Info EV Widget----------------
+
+// ------------- START Vehicle Info EV Widget STATUS----------------
 .panel-vehicle-info-subtitle {
   overflow: hidden;
   padding: 20px;
@@ -1892,6 +1893,153 @@ ul.panel-tabs > li > a > p {
   }
 }
 
+// ------------- START Vehicle Info EV Widget CHARGEMODE----------------
+
+.charge-mode {
+  padding:20px;
+  h5 {
+    margin:0px;
+  }
+}
+
+.charge-mode-block-container {
+  margin-bottom:20px;
+  position: relative;
+  @media (min-width: @screen-tablet) {
+    height:325px;
+  }
+}
+
+
+.charge-mode-block-current-pointer {
+  display: none;
+  width:100%;
+  color:@white;
+  background-color: @brand-primary;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  font-size: @font-size-base;
+  font-weight: @btn-font-weight;
+  line-height: @line-height-base;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 100%;
+    left: 46%;
+    content: " ";
+    height: 0;
+    width: 0;
+    border-top: 10px solid @brand-primary;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+}
+
+
+
+.charge-mode-block-one,
+.charge-mode-block-two,
+.charge-mode-block-three{
+  height:100%;
+  width:100%;
+  position: relative;
+  @media (min-width: @screen-tablet) {
+    width:33.3%;
+    float:left;
+  }
+  background-color: @gray-light;
+  cursor: pointer;
+  &:hover {
+    background-color: @gray;
+  }
+  &.active {
+  background-color: @white;
+    .charge-mode-block-current-pointer {
+      display: block;
+    }
+  }
+}
+
+
+.charge-mode-block-one{
+  border-left: 1px solid @gray;
+  border-top: 1px solid @gray;
+  border-right: 1px solid @gray;
+  // border-bottom: 1px solid red;
+  @media (min-width: @screen-tablet) {
+    border-right: 0px;
+    border-left: 1px solid @gray;
+    border-top: 1px solid @gray;
+    border-bottom: 1px solid @gray;
+  }
+}
+
+.charge-mode-block-two{
+    border: 1px solid @gray;
+}
+
+.charge-mode-block-three{
+    border-left: 1px solid @gray;
+    border-right: 1px solid @gray;
+    border-bottom: 1px solid @gray;
+  @media (min-width: @screen-tablet) {
+    border-left: 0px;
+    border-top: 1px solid @gray;
+    border-bottom: 1px solid @gray;
+    border-right:1px solid @gray;
+  }
+}
+
+
+
+.charge-mode-block-content {
+  padding:20px;
+  h6 {
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+  }
+  span {
+    color: @gray-darker;
+    text-align: center;
+    display: block;
+    font-size: 96px;
+    line-height: .5em;
+    margin: 0px 0px 10px 0px;
+  }
+  p {
+    margin:0px;
+  }
+}
+
+
+.charge-mode-block-content-footer {
+    padding: 0px 0px 20px 0px;
+    text-align: center;
+  @media (min-width: @screen-tablet) {
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+  }
+  ul.radio-list li {
+    padding:0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //------------ START VEHICLE INFO TABLE ------------- // 
 .panel-vehicle-info-table {
@@ -1970,7 +2118,6 @@ ul.panel-tabs > li > a > p {
     padding: 15px 20px 15px 20px;
     text-align: left;
     border: none;
-    // position: relative;
     @media (min-width: @screen-tablet) {
       padding: 15px 20px;
     }
@@ -2000,26 +2147,6 @@ ul.panel-tabs > li > a > p {
     }
   }
 
-  // td:before{
-  //     font-weight: bold;
-  //     padding-left: 0px;
-  //     padding-right: 5px; 
-  //     white-space: nowrap;
-  //     display: inline-block;
-  // }
-
-
-
-  /*
-  Label the data
-  */
-  // @media (max-width: @screen-tablet) {
-  // td:nth-of-type(1):before { content: none; }
-  // td:nth-of-type(2):before { content: "Lifetime:"; }
-  // td:nth-of-type(3):before { content: "Last 30 Days:"; }
-  // td:nth-of-type(4):before { content: none; }
-  // }
-
   .parent td span {
     @media (min-width: @screen-tablet) {
       display:none
@@ -2045,13 +2172,6 @@ ul.panel-tabs > li > a > p {
 table tr:nth-child(4n-1), table tr:nth-child(4n)  {
     background: @gray-light;
 }
-
-
-// .child > td{
-//     border-top: 1px solid red;
-//     margin: 0px 20px;
-// }
-
 
 .child td {
   padding-top:0px;

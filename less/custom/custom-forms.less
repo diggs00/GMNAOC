@@ -41,12 +41,27 @@ input[type="search"] {
 }
 
 // Position radios and checkboxes better
-input[type="radio"],
+
 input[type="checkbox"] {
   margin: 4px 0 0;
   margin-top: 1px \9; /* IE8-9 */
   line-height: normal;
 }
+
+
+
+input[type="radio"] {
+  margin: 0px;
+  margin-top: 1px \9; /* IE8-9 */
+  line-height: normal;
+  margin-right: 5px;
+  margin-left: -15px;
+  margin-top: 1px;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
 
 // Set the height of select and file controls to match text inputs
 input[type="file"] {
@@ -116,8 +131,9 @@ input[type="number"] {
 // input[type="color"]
 
 .form-control {
-  display: inline-block;
+  display: block;
   width: 100%;
+  float: left;
   height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   padding: @padding-base-vertical @padding-base-horizontal;
   font-size: @font-size-large;
@@ -129,6 +145,7 @@ input[type="number"] {
   border-radius: @input-border-radius;
   .box-shadow(inset 0 1px 5px rgba(204,204,204,.75));
   .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+
 
   // Customize the `:focus` state to imitate native WebKit styles.
   .form-control-focus();
@@ -242,10 +259,75 @@ input[type="number"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   position: relative;// DB added
 }
 
+
+// Checkboxes and radios
+//
+// Indent the labels to position radios/checkboxes as hanging controls.
+
+// .radio {
+//   display: block;
+//   min-height: @line-height-computed; // clear the floating input if there is no label text
+//   margin-top: 0px;
+//   margin-bottom: 10px;
+//   padding-left: 0px;
+//   vertical-align: middle;
+//   label {
+//     display: block;
+//     margin-bottom: 0;
+//     font-weight: normal;
+//     cursor: pointer;
+//   }
+// }
+
+
+// .checkbox {
+//   display: block;
+//   min-height: @line-height-computed; // clear the floating input if there is no label text
+//   margin-top: 0px;
+//   margin-bottom: 10px;
+//   padding-left: 0px;
+//   vertical-align: middle;
+//   label {
+//     display: inline;
+//     margin-bottom: 0;
+//     font-weight: normal;
+//     cursor: pointer;
+//   }
+// }
+
+// .checkboxIE {
+//   display: block;
+//   min-height: @line-height-computed; // clear the floating input if there is no label text
+//   margin-top: 0px;
+//   margin-bottom: 10px;
+//   margin-left: 0px;
+//   padding-left: 0px;
+//   vertical-align: middle;
+//   label {
+//     display: inline;
+//     margin-bottom: 0;
+//     font-weight: normal;
+//     cursor: pointer;
+//   }
+// }
+
+
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  float: left;
+  margin-left: -20px;
+}
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+}
 
 // Radios and checkboxes on same line
 .radio-inline,
@@ -460,6 +542,151 @@ div.input{
 
 
 
+  // JEFF:/* custom labels */
+
+// label.customCheckLabel{
+//   margin-left:10px;
+//   margin-right:10px;
+//   padding-bottom:0px;
+//   font-weight:normal;
+//   vertical-align: bottom;
+
+// }
+
+// label.customCheckLabelIE{
+//   margin-left:10px;
+//   margin-right:10px;
+//   padding-bottom:0px;
+//   font-weight:normal;
+//   vertical-align: -12%;
+
+// }
+
+
+// label.customRadioLabel{
+//   margin-left:32px;
+//   margin-right:10px;
+//   padding-bottom:0px;
+//   font-weight:normal;
+//   vertical-align: bottom;
+// }
+
+
+//   /* CheckBoxes */
+
+// ul.checkbox li {
+//   border-bottom: @gray-light 1px solid;
+//   margin-bottom: 3px;
+//   padding-bottom: 10px;
+// }
+
+// ul.radio li {
+//   border-bottom: @gray-light 1px solid;
+//   // margin-bottom: 3px;
+//   padding-bottom: 10px;
+//   padding-top: 10px;
+// }
+
+// ul.checkbox.border-bottom-none li,
+// ul.radio.border-bottom-none li {
+//   border-bottom: 0px;
+//   margin-bottom: 0px;
+//   padding-bottom: 0px;
+// }
+
+
+
+// .regular-checkbox {
+//   display: none;
+//   vertical-align:middle;
+// }
+
+// .regular-checkbox + label {
+//   background-color: #ffffff;
+//   border: 1px solid @gray;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 0px 2px 0px @gray;
+//   padding: 10px;
+//   border-radius: 0px;
+//   display: inline-block;
+//   position: relative;
+//   vertical-align:middle;
+//   margin-top: 7px;
+// }
+
+// .regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+// }
+
+// .regular-checkbox:checked + label {
+//   background-color: @white;
+//   border: 1px solid @gray;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 0px 0px 2px 0px @gray-light;
+//   color: #99a1a7;
+// }
+
+// .regular-checkbox:checked + label:after {
+//   font-family: 'icon-ui';
+//   font-weight: normal;
+//   content: "\e640";
+//   font-size: 22px;
+//   position: absolute;
+//   top: -6px;
+//   left: 0px;
+//   margin-left:2px;
+//   color: #888888;
+// }
+
+
+
+//   /* Radio */
+// .regular-radio {
+//  vertical-align:middle;
+//  font-weight:normal;
+//  left: 26px;
+//  opacity: 0;
+//  position: relative;
+//  z-index: 5;
+// }
+
+// .regular-radio + label {
+//   -webkit-appearance: none;
+//   background-color: @white;
+//   border: 1px solid @gray;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.1), inset 0px -15px 10px -12px rgba(0,0,0,0.1);
+//   padding: 10px;
+//   border-radius: 50px;
+//   position: absolute;
+//   vertical-align:middle;
+//   font-weight:normal;
+
+// }
+// .regular-radio:checked + label:after {
+//   content: ' ';
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 50px;
+//   position: absolute;
+//   top: 0px;
+//   background: @brand-primary;
+//   box-shadow: inset 0px 0px 0px rgba(0,0,0,0.3);
+//   text-shadow: 0px;
+//   left: 0px;
+//   font-size: 20px;
+//   font-weight:normal;
+// }
+
+// .regular-radio:checked + label {
+//   background-color: @white;
+//   color: @gray;
+//   border: 1px solid @gray;
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+//   font-weight:normal;
+// }
+
+// .regular-radio + label:active, .regular-radio:checked + label:active {
+//   box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+// }
+
 
 
   /* Select Dropdowns */
@@ -470,7 +697,7 @@ select {
   background-color: transparent;
   color: @gray-dark;
   font-size: 14px;
-  padding: 7px 0 7px 7px;
+  padding: 7px 40px 7px 7px;
   line-height:12px;
   cursor:pointer;
   -webkit-appearance: none;
@@ -484,7 +711,8 @@ select {
 .select-container {
   width: 100%;
   overflow:hidden;
-  background: url("../img/downArrow.jpg") no-repeat right #f0f0f0;
+  // background: url("../img/downArrow.jpg") no-repeat right #f0f0f0;
+  background: url("../../../imageRedirect/content/dam/gmownercenter/gmna/static/siteImages/icons/downArrow.jpg") no-repeat right #f0f0f0;
   border-color:@input-border;
   border-style:solid;
   border-width:1px;
@@ -493,7 +721,8 @@ select {
 .on-selectError .select-container{
   width: 100%;
   overflow:hidden;
-  background: url("../img/downArrowError.jpg") no-repeat right;
+  // background: url("../img/downArrowError.jpg") no-repeat right;
+  background: url("../../../imageRedirect/content/dam/gmownercenter/gmna/static/siteImages/icons/downArrowError.jpg") no-repeat right;
   background-color:@red-lighter;
   border-color:@red;
   border-style:solid;
@@ -573,6 +802,8 @@ div.fail{
   }
 }
 
+
+
 .form-search-input {
   overflow: hidden; 
   padding-right: 10px;
@@ -580,71 +811,80 @@ div.fail{
 
 
 
+
 //-------------- DB: CheckBoxes------------------
 // Bootstrap Overrides:
 .checkbox {
-	display: inline-block;
-	min-height: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 0px;
-	vertical-align: inherit;
+  display: inline-block;
+  min-height: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  vertical-align: inherit;
 }
 
 ul.checkbox-list li {
-	border-bottom: @gray-light 1px solid;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
+  border-bottom: @gray-light 1px solid;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
+ul.checkbox-list li.border-bottom-none{
+  border-bottom: transparent 0px solid;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+
+
 ul.checkbox-list li:last-child {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 
 ul.checkbox-list label {
-	cursor: pointer;
-	margin-bottom: 0px;
-	font-weight: normal;
-	font-size: @font-size-large;
+  cursor: pointer;
+  margin-bottom: 0px;
+  font-weight: normal;
+  font-size: @font-size-large;
 }
 
 .checkbox input {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* style the "fake" checkbox */
 .checkbox-value {
-	background-color: #ffffff;
-	border: 1px solid @gray;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 0px 2px 0px @gray;
-	border-radius: 0px;
-	display: inline-block;
-	position: relative;
-	width: 1.5em;
-	height: 1.5em;
-	margin-right: 0.25em;
-	vertical-align: -0.5em;
+  background-color: #ffffff;
+  border: 1px solid @gray;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 0px 2px 0px @gray;
+  border-radius: 0px;
+  display: inline-block;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.25em;
+  vertical-align: -0.5em;
 }
 
 /* style the "fake CHECKED" checkbox */
 input:checked + .checkbox-value:before {
-	font-family: 'icon-ui';
-	font-weight: normal;
-	content: "\e640";
-	font-size: 22px;
-	position: absolute;
-	top: -6px;
-	left: 0px;
-	margin-left:2px;
-	color: #888888;
+  font-family: 'icon-ui';
+  font-weight: normal;
+  content: "\e640";
+  font-size: 22px;
+  position: absolute;
+  top: -6px;
+  left: 0px;
+  margin-left:2px;
+  color: #888888;
 }
 
 
@@ -653,155 +893,80 @@ input:checked + .checkbox-value:before {
 //-------------- DB: Radios------------------
 // Bootstrap Overrides:
 .radio {
-	display: inline-block;
-	min-height: 0px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-left: 0px;
-	vertical-align: inherit;
+  display: inline-block;
+  min-height: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  vertical-align: inherit;
 }
 
 ul.radio-list li {
-	border-bottom: @gray-light 1px solid;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
+  border-bottom: @gray-light 1px solid;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+
+ul.radio-list li.border-bottom-none{
+  border-bottom: transparent 0px solid;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 ul.radio-list li:last-child {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 
 ul.radio-list label {
-	cursor: pointer;
-	margin-bottom: 0px;
-	font-weight: normal;
-	font-size: @font-size-large;
+  cursor: pointer;
+  margin-bottom: 0px;
+  font-weight: normal;
+  font-size: @font-size-large;
 }
 
 .radio input {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* style the "fake" checkbox */
 .radio-value {
-	width: 1.5em;
-	height: 1.5em;
-	background-color: #fff;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 95% auto;
-	border-radius: 50%;
-	border: 1px solid @gray;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 0px 2px 0px @gray;
-	display: inline-block;
-	position: relative;
-	margin-right: 0.25em;
-	vertical-align: -0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95% auto;
+  border-radius: 50%;
+  border: 1px solid @gray;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 0px 2px 0px @gray;
+  display: inline-block;
+  position: relative;
+  margin-right: 0.25em;
+  vertical-align: -0.5em;
 
 }
 
 /* style the "fake CHECKED" radio */
 input:checked + .radio-value:before {
-	content: " ";
-	width: 1.4em;
-	height: 1.4em;
-	background: @brand-primary;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 95% auto;
-	border-radius: 50%;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
-
-/* ---------------------DB: START: NEW Select Form (javascript for Firefox fix)------------------- */
-
-// select {
-//   color: @gray-dark;
-//   padding: 7px 0 7px 7px;
-//   cursor:pointer;
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-// }
-
-/* style the "fake" select */
-// Default State
-.select-container.default {
-  background:  url("../../img/downArrow.jpg") no-repeat right @gray-light;
-  border: 1px solid @input-border;
-  border-radius: 0;
-  position: relative;
-  vertical-align: middle;
-  font-size: @font-size-large;
-  height: 37px;
-  line-height: 2.2em;
-  padding: 0px 44px 0px 10px;
-}
-
-.select-container.default :hover {
-  border-color: @input-color;
-}
-
-.select-container.default .focus {
-  border-color: @input-color;
-}
-
-
-// Error State
-.select-container.on-selectError{
-  background:  url("../../img/downArrowError.jpg") no-repeat right @red-lighter;
-  border: 1px solid @red;
-  border-radius: 0;
-  position: relative;
-  vertical-align: middle;
-  font-size: @font-size-large;
-  height: 37px;
-  line-height: 2.2em;
-  padding: 0px 44px 0px 10px;
-}
-
-.select-container.on-selectError:hover {
-  border-color: @red;
-}
-
-.select-container.on-selectError.focus {
-  border-color: @red;
-}
-
-
-/* Default styles for <select> */
-.select-container.default select {
-  height: 100%;
-  display: block;
-  width: 100%;
-  background-color: @gray-light;
-}
-
-.select-container.on-selectError select {
-  height: 100%;
-  display: block;
-  width: 100%;
-  background-color: @red-lighter;
-  color:@red;
-}
-/* hide and overlay when JavaScript is enabled */
-.select-container select {
-  top: 0;
-  left: 0;
-  height: 100%;
-  min-height: 100%;
-  min-width: 100%;
-  opacity: 0;
+  content: " ";
+  width: 1.4em;
+  height: 1.4em;
+  background: @brand-primary;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 95% auto;
+  border-radius: 50%;
   position: absolute;
-
+  top: 0px;
+  left: 0px;
 }
+
