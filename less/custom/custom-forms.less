@@ -259,8 +259,10 @@ input[type="number"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: 0px;
-  position: relative;// DB added
+	margin-bottom: 5px;
+	position: relative;// DB added
+	overflow: hidden;// DB added
+	clear: both;// DB added
 }
 
 
@@ -711,8 +713,7 @@ select {
 .select-container {
   width: 100%;
   overflow:hidden;
-  // background: url("../img/downArrow.jpg") no-repeat right #f0f0f0;
-  background: url("../../../imageRedirect/content/dam/gmownercenter/gmna/static/siteImages/icons/downArrow.jpg") no-repeat right #f0f0f0;
+  background: url("../img/downArrow.jpg") no-repeat right #f0f0f0;
   border-color:@input-border;
   border-style:solid;
   border-width:1px;
@@ -721,8 +722,7 @@ select {
 .on-selectError .select-container{
   width: 100%;
   overflow:hidden;
-  // background: url("../img/downArrowError.jpg") no-repeat right;
-  background: url("../../../imageRedirect/content/dam/gmownercenter/gmna/static/siteImages/icons/downArrowError.jpg") no-repeat right;
+  background: url("../img/downArrowError.jpg") no-repeat right;
   background-color:@red-lighter;
   border-color:@red;
   border-style:solid;
@@ -970,3 +970,86 @@ input:checked + .radio-value:before {
   left: 0px;
 }
 
+
+
+/* ---------------------DB: START: NEW Select Form (javascript for Firefox fix)------------------- */
+
+// select {
+//   color: @gray-dark;
+//   padding: 7px 0 7px 7px;
+//   cursor:pointer;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+// }
+
+/* style the "fake" select */
+// Default State
+.select-container.default {
+  background:  url("../../img/downArrow.jpg") no-repeat right @gray-light;
+  border: 1px solid @input-border;
+  border-radius: 0;
+  position: relative;
+  vertical-align: middle;
+  font-size: @font-size-large;
+  height: 37px;
+  line-height: 2.2em;
+  padding: 0px 44px 0px 10px;
+}
+
+.select-container.default :hover {
+  border-color: @input-color;
+}
+
+.select-container.default .focus {
+  border-color: @input-color;
+}
+
+
+// Error State
+.select-container.on-selectError{
+  background:  url("../../img/downArrowError.jpg") no-repeat right @red-lighter;
+  border: 1px solid @red;
+  border-radius: 0;
+  position: relative;
+  vertical-align: middle;
+  font-size: @font-size-large;
+  height: 37px;
+  line-height: 2.2em;
+  padding: 0px 44px 0px 10px;
+}
+
+.select-container.on-selectError:hover {
+  border-color: @red;
+}
+
+.select-container.on-selectError.focus {
+  border-color: @red;
+}
+
+
+/* Default styles for <select> */
+.select-container.default select {
+  height: 100%;
+  display: block;
+  width: 100%;
+  background-color: @gray-light;
+}
+
+.select-container.on-selectError select {
+  height: 100%;
+  display: block;
+  width: 100%;
+  background-color: @red-lighter;
+  color:@red;
+}
+/* hide and overlay when JavaScript is enabled */
+.select-container select {
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+
+}
