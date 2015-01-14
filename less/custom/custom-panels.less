@@ -67,7 +67,7 @@
       padding-bottom: 20px;
       margin-bottom:20px;
     }
-    
+
     img {
       width: 25%;
       float: left;
@@ -93,7 +93,39 @@
 }
 
 
+.panel-card {
+    &.radio {
+        background-color: @white;
+        border-color:@gray;
+        box-shadow:none;
+        -webkit-box-shadow:none;
+        margin-bottom:30px;
+        display: block;
+        .title {
+            border-bottom: 1px solid @gray;
+            overflow: hidden;
+            padding-bottom: 20px;
+            margin-bottom:20px;
+        }
 
+        img {
+            float: none;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        h5 {
+            text-align: center;
+            width: 100%;
+            float: none;
+            padding: 0px;
+        }
+        .radio-footer {
+            padding: 0px 0px 0px 0px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+}
 
 
 
@@ -275,6 +307,15 @@
 }
 
 
+.panel-primary-tool .panel-title {
+    color:@white;
+    h3 {
+        color:@white;
+    }
+}
+
+
+
 
 
 // DB: Makes Title work with icon floated to right
@@ -286,7 +327,7 @@
   > a {
     color: inherit;
   }
-} 
+}
 
 
 
@@ -610,6 +651,11 @@
   .panel-variant-icon(@panel-default-border; @panel-primary-icon-text; @panel-primary-icon-heading-bg; @panel-primary-icon-border);
 }
 
+// Contextual variations with TOOL right
+.panel-primary-tool {
+    .panel-variant-tool(@panel-default-border; @panel-primary-text; @panel-primary-heading-bg; @panel-primary-border);
+}
+
 
 
 // Contextual variations with EXPAND/COLLAPSE
@@ -657,13 +703,13 @@
 
   .panel-vehicle-display-image {
     text-align: center;
-    height:210px;  
+    height:210px;
     @media (max-width: @screen-sm) {
       height: 320px;
-    } 
+    }
     @media (max-width: @screen-xs) {
       height: 210px;
-    }  
+    }
   }
 
   img {
@@ -1091,7 +1137,7 @@ ul.panel-tabs > li{
       border-bottom: 11px solid transparent;
       border-left: 11px solid @gray;
       margin-top: -11px;
-    } 
+    }
   }
 }
 
@@ -1181,7 +1227,7 @@ ul.panel-tabs > li > a > p {
     @media (min-width: @screen-tablet) {
         width: 70%;
     }
-    
+
     + a.btn-right {
       @media (min-width: @screen-tablet) {
           margin-top:0px;
@@ -1205,7 +1251,7 @@ ul.panel-tabs > li > a > p {
     @media (min-width: @screen-tablet) {
         width: 70%;
     }
-    
+
     + a.btn-right {
       @media (min-width: @screen-tablet) {
           margin-top:0px;
@@ -1665,13 +1711,13 @@ ul.panel-tabs > li > a > p {
       height:210px;
       @media (max-width: @screen-sm) {
       height: 320px;
-      } 
+      }
       @media (min-width: @screen-md) {
       height: 320px;
       }
       @media (max-width: @screen-xs) {
       height: 210px;
-      }  
+      }
     }
     img {
       display: inline;
@@ -2001,7 +2047,7 @@ ul.panel-tabs > li > a > p {
       position: absolute;
       top: 0px;
       left: 0px;
-    }   
+    }
   }
   &.active-disabled {
     background-color: @white;
@@ -2052,7 +2098,7 @@ ul.panel-tabs > li > a > p {
 .charge-mode-block-three {
   &.active,
   &.active-disabled {
-    .charge-mode-block-current-pointer { 
+    .charge-mode-block-current-pointer {
       border-left: 1px solid @gray;
       border-top: 1px solid @gray;
       border-right: 1px solid @gray;
@@ -2160,7 +2206,7 @@ ul.panel-tabs > li > a > p {
 .charge-mode-block-two,
 .charge-mode-block-three {
   &.active {
-    .charge-mode-block-content { 
+    .charge-mode-block-content {
       border-top: 0px;
       @media (min-width: @screen-tablet) {
         border-top: 1px solid @gray;
@@ -2184,7 +2230,7 @@ ul.panel-tabs > li > a > p {
 
 
 
-//------------ START VEHICLE INFO TABLE ------------- // 
+//------------ START VEHICLE INFO TABLE ------------- //
 .panel-vehicle-info-table {
  table {
     display: block;
@@ -2335,4 +2381,3 @@ table tr:nth-child(4n-1), table tr:nth-child(4n)  {
 }
 
 }
-
