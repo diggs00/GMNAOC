@@ -2408,3 +2408,26 @@ table tr:nth-child(4n-1), table tr:nth-child(4n)  {
 .panel-content {
    padding:20px;
 }
+
+
+.table-cell-column1-bluetooth{
+  display: table-cell;
+  float: left;
+  vertical-align: top;
+  @media (min-width: @screen-tablet) {
+    float: none;
+    border-right: 1px solid @gray;
+    border-bottom: none;
+  }
+}
+
+.table-cell-column2-bluetooth {
+  display: table-cell;
+  float: left;
+  vertical-align: top;
+  border-top: 1px solid @gray;
+  @media (min-width: @screen-tablet) {
+    float: none;
+    border-top: none;
+  }
+}
