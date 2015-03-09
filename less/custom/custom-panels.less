@@ -2431,3 +2431,33 @@ table tr:nth-child(4n-1), table tr:nth-child(4n)  {
     border-top: none;
   }
 }
+
+
+
+
+ul.panel-tabs-topics {
+   margin: 0px;
+   > li {
+      padding: 15px;
+      position: relative;
+      display: block;
+      border-bottom: 1px solid @gray;
+      cursor: pointer;
+      &:hover {
+         background-color: @gray-light;
+      }
+      &:last-child {
+         border-bottom: none;
+      }
+      a {
+         width: 90%;
+         display: block;
+      }
+   }
+   span.icon-ui-arrowright {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      line-height: 0;
+   }
+}
