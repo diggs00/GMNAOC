@@ -779,7 +779,7 @@ div.fail{
   margin-bottom: 10px;
   width: 70%;
   float: left;
-  } 
+  }
 }
 
 .form-link-right p {
@@ -789,7 +789,7 @@ div.fail{
   display: inline-block;
   width: 30%;
 
-  } 
+  }
 }
 
 
@@ -807,7 +807,7 @@ div.fail{
 
 
 .form-search-input {
-  overflow: hidden; 
+  overflow: hidden;
   padding-right: 10px;
 }
 
@@ -901,13 +901,25 @@ input:checked + .checkbox-value:before {
   margin-bottom: 0px;
   padding-left: 0px;
   vertical-align: inherit;
+  float: left;
 }
 
 ul.radio-list li {
-  border-bottom: @gray-light 1px solid;
+/*   border-bottom: @gray-light 1px solid; */
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
+
+ul.radio-list-inline li {
+/*   border-bottom: @gray-light 1px solid; */
+  display: block;
+  margin-bottom: 10px;
+  @media (min-width: @screen-tablet) {
+     display: inline;
+     padding-right: 20px;
+  }
+}
+
 
 
 ul.radio-list li.border-bottom-none{
@@ -927,6 +939,14 @@ ul.radio-list label {
   font-weight: normal;
   font-size: @font-size-large;
 }
+
+ul.radio-list-inline label {
+  cursor: pointer;
+  margin-bottom: 0px;
+  font-weight: normal;
+  font-size: @font-size-large;
+}
+
 
 .radio input {
   border: 0;
@@ -1081,6 +1101,3 @@ input:checked + .radio-value:before {
 	border-style:solid;
 	border-width:1px;
 }
-
-
-
