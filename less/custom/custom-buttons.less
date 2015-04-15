@@ -1,3 +1,4 @@
+
 //
 // Buttons
 // --------------------------------------------------
@@ -99,6 +100,20 @@
  //    }
 }
 
+
+.btn-right + .btn-right + .btn-right,
+.btn-left + .btn-left + .btn-left{
+    margin-bottom: 0px;
+    margin-right:0px;
+    margin-top: 10px;
+    @media (min-width: @screen-tablet) {
+      margin-top: 0px;
+    }
+
+}
+
+
+
 .btn-left + .btn-right,
 .btn-right + .btn-left {
   margin-bottom: 0px;
@@ -145,10 +160,12 @@
 
 .btn-left.stacked,
 .btn-right.stacked{
-  margin-right: 10px;
-  margin-bottom: 10px;
-  // display: block;
+   margin-right: 0px;
+   margin-bottom: 10px;
+   display: block;
 }
+
+
 
 
 .btn-left.stacked + .btn-link-secondary.btn-left.stacked {
@@ -198,7 +215,7 @@ ul + a.btn-right {
     }
 }
 
-    
+
 
 
 // Alternate buttons
