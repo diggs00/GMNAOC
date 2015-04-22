@@ -209,7 +209,7 @@ h6 small, .h6 small { font-size: @font-size-base; }
 
 
 .page-header-image {
-  text-shadow: 0px 0px 5px #323334; 
+  text-shadow: 0px 0px 5px #323334;
   filter: dropshadow(color=#323334, offx=0, offy=0);
   text-transform: Uppercase;
   color:@white;
@@ -296,7 +296,7 @@ p.page-header-image {
 
 
 .page-header-image {
-  text-shadow: 0px 0px 5px #323334; 
+  text-shadow: 0px 0px 5px #323334;
   filter: dropshadow(color=#323334, offx=0, offy=0);
   text-transform: Uppercase;
   color:@white;
@@ -415,15 +415,16 @@ ol {
 
 // DB: Styled keeps list items block level, just removes default browser padding and list-style
 .list-styled {
-  padding-left: 0;
-  list-style: none;
+/*   padding-left: 0; */
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
-.list-styled li:before {
+/* .list-styled li:before {
   padding-right:5px;
-  content: "\2013 \020";
+  content: "2013 020";
  }
-
+ */
 
 
 
