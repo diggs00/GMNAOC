@@ -1,39 +1,45 @@
-var app = angular.module('angularjs-starter', []);
+var app = angular.module('angularjs-starter', ['ngAnimate']);
 
 app.controller('MainCtrl', function($scope) {
-  $scope.msg = "";
+   $scope.example = "David Baker";
+
 });
+
+
+
 
 app.controller('ctrlA', function($scope) {
   $scope.v = "";
 });
 
+
+
 app.controller('ctrlB', function($scope) {
-    
+
     var page = QueryString.p;
-    
+
     var template = QueryString.template;
     var widgets = QueryString.widget;
 
 
-    
+
     if (page == undefined  && template == undefined){
-        page = "home";   
-        
+        page = "home";
+
         $scope.templates = [
         {
             name: 'start',
             url: 'templates/'+page+'.html'}
         ];
-        
+
     }else if(template){
-        
+
          $scope.templates = [
         {
             name: 'start',
             url: 'pages/'+template+'.html'}
         ];
-        
+
     }else{
 
 
@@ -42,7 +48,7 @@ app.controller('ctrlB', function($scope) {
             name: 'start',
             url: 'templates/'+page+'.html'}
         ];
-        
+
     }
 
     if(widgets){
@@ -55,9 +61,9 @@ app.controller('ctrlB', function($scope) {
 
     }
     //console.log(widgets)
-    
+
     $scope.template = $scope.templates[0];
-    
+
 });
 
 app.controller('ctrlC', function($scope) {
@@ -66,7 +72,7 @@ app.controller('ctrlC', function($scope) {
 
 
 var QueryString = function () {
-  // This function is anonymous, is executed immediately and 
+  // This function is anonymous, is executed immediately and
   // the return value is assigned to QueryString!
   var query_string = {};
   var query = window.location.search.substring(1);
@@ -84,6 +90,6 @@ var QueryString = function () {
     } else {
       query_string[pair[0]].push(pair[1]);
     }
-  } 
+  }
     return query_string;
 } ();
