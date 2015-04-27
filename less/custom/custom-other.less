@@ -538,12 +538,15 @@
 
 /* ---Button Pill TAB--- */
 .btn-pill-tab {
-  color: @btn-info-color;
-  border: 1px solid;
-  border-color: @btn-info-border;
-  background-color: @btn-info-bg;
-  width: auto;
-  margin-bottom:5px;
+   color: @btn-info-color;
+   border: 1px solid;
+   border-color: @btn-info-border;
+   background-color: @btn-info-bg;
+   margin-bottom:5px;
+   width: 100%;
+   @media (min-width: @screen-tablet) {
+      width: auto;
+   }
 
 
 
