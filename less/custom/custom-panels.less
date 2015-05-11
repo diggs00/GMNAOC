@@ -2450,3 +2450,143 @@ ul.panel-tabs-topics {
       line-height: 0;
    }
 }
+
+
+
+
+
+
+
+
+//------------ START VEHICLE MANUAL TABLE ------------- //
+.panel-vehicle-manual-table {
+ table {
+    display: block;
+    @media (min-width: @screen-tablet) {
+      display: table;
+    }
+  }
+
+  thead {
+    display: block;
+    @media (min-width: @screen-tablet) {
+    display: table-header-group;
+    }
+  }
+
+  tbody {
+    display: block;
+    overflow: hidden;
+    @media (min-width: @screen-tablet) {
+      display: table-row-group;
+    }
+  }
+
+  th {
+    display: block;
+    @media (min-width: @screen-tablet) {
+      display: table-cell;
+    }
+  }
+
+  tr {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    @media (min-width: @screen-tablet) {
+      display: table-row;
+      width: inherit;
+      float:none;
+    }
+  }
+
+  td {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    @media (min-width: @screen-tablet) {
+      display: table-cell;
+      width: inherit;
+      float:none;
+    }
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    @media (max-width: @screen-tablet) {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: @white;
+    border: none;
+    a.btn-link {
+      text-align: left;
+    }
+  }
+
+  td {
+    padding: 20px;
+    text-align: left;
+    border: none;
+    overflow: hidden;
+    &.manual-title {
+      margin-bottom:0px;
+      > span {
+         float:left;
+         font-size:40px;
+      }
+      >h5 {
+         margin-left:45px;
+         margin-bottom:0px;
+      }
+    }
+    &.button {
+      padding-top: 0px;
+      vertical-align: top;
+      margin: 0px;
+      @media (min-width: @screen-sm) {
+        padding-top:20px;
+        text-align: right;
+      }
+      > a.btn-left {
+         margin-bottom: 0px;
+         margin-right: 0px;
+      }
+    }
+  }
+
+
+
+
+
+
+
+  th {
+    h5 {
+      margin-bottom:0px;
+    }
+  }
+
+  th {
+    background-color: @white;
+    font-weight: bold;
+    color: @gray-dark;
+    white-space: nowrap;
+    padding: 15px 20px;
+    text-align: left
+  }
+
+
+   table tr:nth-child(even){
+       background: @gray-light;
+   }
+
+
+}
