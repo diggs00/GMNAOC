@@ -1,0 +1,560 @@
+
+.page-content {
+	clear: both;
+	overflow: hidden;
+	padding-top:20px;
+	@media (min-width: 850px) {
+	clear: none;
+	}
+}
+
+
+
+.top-nav {
+	position: relative;
+	z-index: 2;
+	left: 0;
+	width: 100%;
+	height: 83px;
+	background: #ffffff;
+	border-bottom: 1px solid @gray;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+button.hamburger {
+	background-image: none;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	/* navigation trigger - visible on mobile devices only */
+	float: right;
+	position: relative;
+	display: block;
+	width: 34px;
+	height: 44px;
+	margin-right: 20px;
+	padding:20px;
+	/* hide text */
+	overflow: hidden;
+	white-space: nowrap;
+	color: transparent;
+	height: 100%;
+	@media (min-width: 850px) {
+		display: none;
+	}
+	span, span::before, span::after {
+		/* hamburger icon in CSS */
+		position: absolute;
+		display: inline-block;
+		height: 3px;
+		width: 24px;
+		background: @gray-dark;
+	}
+	span {
+		position: absolute;
+		top: 50%;
+		right: 5px;
+		margin-top: -2px;
+	}
+	span::before, span::after {
+		content: '';
+		right: 0;
+	}
+	span::before {
+		/* menu icon top line */
+		top: -6px;
+	}
+	span::after {
+		/* menu icon bottom line */
+		top: 6px;
+	}
+}
+
+
+
+
+.top-nav-items-left {
+	height: 100%;
+	float:left;
+	ul.list-inline{
+		height: 100%;
+		margin-bottom:0px;
+	}
+	li {
+		height:100%;
+		padding:0px;
+	}
+	li:last-child{
+		border-left: 1px solid @gray;
+		border-right: 1px solid @gray;
+	}
+	.top-nav-item {
+		position: relative;
+	   top: 50%;
+	   transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		a {
+			color: @gray-dark;
+		   white-space: normal;
+		   cursor: pointer;
+		   outline: 0;
+			padding: 20px;
+			display: inline-block;
+			text-align: center;
+			text-align: -webkit-center;
+			text-align: -moz-center;
+			text-align: -o-center;
+			text-align: -ms-center;
+		}
+		img {
+			display: block;
+			text-align: center;
+			text-align: -webkit-center;
+			text-align: -moz-center;
+			text-align: -o-center;
+			text-align: -ms-center;
+		}
+	}
+	.top-nav-item-vehicle {
+		position: relative;
+	   top: 50%;
+	   transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		&:after {
+			position: absolute;
+			bottom: -3px;
+			left: 45%;
+			content: " ";
+			height: 0;
+			width: 0;
+			border-top: 10px solid @white;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			z-index: 2;
+		}
+		&:before {
+			position: absolute;
+			bottom: -4px;
+			left: 45%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			border-top: 10px solid @gray;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			margin-bottom: -3px;
+			z-index: 1;
+		}
+		a {
+			color: @gray-dark;
+		   white-space: normal;
+		   cursor: pointer;
+		   outline: 0;
+			padding: 20px;
+			display: inline-block;
+			text-align: center;
+			text-align: -webkit-center;
+			text-align: -moz-center;
+			text-align: -o-center;
+			text-align: -ms-center;
+		}
+		img {
+			display: block;
+			text-align: center;
+			text-align: -webkit-center;
+			text-align: -moz-center;
+			text-align: -o-center;
+			text-align: -ms-center;
+		}
+	}
+}
+
+
+.top-nav-items-right {
+	float:left;
+	width:100%;
+	z-index: -2;
+	position: relative;
+	@media (min-width: 850px) {
+		display: block;
+		float: right;
+		width:auto;
+		z-index: 0;
+	}
+	> ul.list-inline{
+			list-style: none;
+			background-color: @white;
+			display: block;
+			margin-bottom:0px;
+			@media (min-width: 850px) {
+				list-style: none;
+				background-color: @white;
+				float:none;
+			}
+		> li {
+			display: inline;
+			padding:0px;
+			@media (min-width: 850px) {
+				border-left: 1px solid @gray;
+				display: inline-block;
+			}
+		}
+	}
+	.top-nav-item {
+		position: relative;
+		> a, .search a {
+			color: @gray-dark;
+		   white-space: normal;
+		   cursor: pointer;
+		   outline: 0;
+			padding: 10px 20px;
+			display: block;
+			border-bottom: 1px solid @gray;
+			@media (min-width: 850px) {
+			   white-space: normal;
+			   cursor: pointer;
+			   outline: 0;
+				padding: 20px;
+				display: block;
+				border-bottom: none;
+			}
+		}
+		.search a {
+			display: none;
+			@media (min-width: 850px) {
+			display: block;
+			}
+		}
+		.search {
+			position: relative;
+	      margin: 20px 20px;
+			overflow: hidden;
+			&:before {
+				content: '';
+		      position: absolute;
+		      left: 8px;
+		      top: 50%;
+		      bottom: auto;
+		      -webkit-transform: translateY(-50%);
+		      -moz-transform: translateY(-50%);
+		      -ms-transform: translateY(-50%);
+		      -o-transform: translateY(-50%);
+		      transform: translateY(-50%);
+		      height: 16px;
+		      width: 16px;
+		      background: url(../img/icon-graphic-search.svg) no-repeat 0 0;
+				@media (min-width: 850px) {
+				display:none;
+				}
+			}
+			@media (min-width: 850px) {
+				margin: 0px;
+				overflow: initial;
+			}
+			input {
+		  	display: block;
+			padding-left: 32px;
+			  	@media (min-width: 850px) {
+			  	display: none;
+			  	}
+			}
+		}
+		span {
+			font-size: 20px;
+			margin-bottom: 5px;
+			display: inline;
+			@media (min-width: 850px) {
+				font-size: 20px;
+				margin-bottom: 5px;
+				display: block;
+				text-align: center;
+				text-align: -webkit-center;
+				text-align: -moz-center;
+				text-align: -o-center;
+				text-align: -ms-center;
+			}
+		}
+		// The dropdown menu arrow indicator for phone only
+		.menu-arrow-default {
+			display: inline-block;
+			float:right;
+			margin-top:2px;
+			@media (min-width: 850px) {
+			display: none;
+			}
+			> span {
+				font-size: 13px;
+				vertical-align: middle;
+			}
+		}
+		.menu-arrow-open {
+ 		  display: none;
+		}
+	}
+	// The dropdown menu TOP NAV (ul)
+	ul.top-nav-dropdown-menu {
+		list-style: none;
+		display: none;
+		background-color: @gray-light;
+		@media (min-width: 850px) {
+			position: absolute;
+			top: 99%;
+			right: 0;
+			z-index: 0;
+			display: none; // none by default, but block on "open" of the menu
+			float: left;
+			min-width: 160px;
+			padding: 0px;
+			margin: 2px 0 0; // override default ul
+			list-style: none;
+			font-size: @font-size-base;
+			background-clip: padding-box;
+		}
+		.divider {
+			display:none;
+			@media (min-width: 850px) {
+				height: 1px;
+				margin:0px;
+				overflow: hidden;
+				border-bottom: 1px solid @gray;
+			}
+		}
+		// Links within the dropdown menu
+		> li > a {
+			display: block;
+			padding: 10px 20px;
+			clear: both;
+			font-weight: normal;
+			line-height: @line-height-base;
+			color: @dropdown-link-color;
+			white-space: nowrap; // prevent links from randomly breaking onto new lines
+			@media (min-width: 850px) {
+				padding: 15px 15px;
+	 		}
+		}
+		li {
+		border-left: none;
+		}
+	}
+	// Open state for the dropdown
+	.open {
+	  // Show the menu
+	  > .top-nav-dropdown-menu {
+	    display: block;
+	  }
+	  .menu-arrow-open {
+		  display: inline-block;
+		  float:right;
+		  margin-top:2px;
+		  @media (min-width: 850px) {
+		  display: none;
+		  }
+		  > span {
+			  font-size: 13px;
+			  vertical-align: middle;
+		  }
+	  }
+	  .menu-arrow-default {
+		  display: none;
+	  }
+	  // Remove the outline when :focus is triggered
+	  > a {
+	    outline: 0;
+	  }
+	}
+}
+
+
+.side-nav {
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	z-index: 1;
+	position: relative;
+	@media (min-width: 850px) {
+		float:left;
+		z-index: 1;
+		min-height: 100vh;
+		max-height: none;
+		width: 120px;
+		background: #ffffff;
+		box-shadow: 6px -5px 11px -5px rgba(0,0,0,0.4);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	 > ul {
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+}
+
+.side-nav-items {
+	float:left;
+	width:100%;
+	z-index: -2;
+	position: relative;
+	text-align: left;
+	text-align: -webkit-left;
+	text-align: -moz-left;
+	text-align: -o-left;
+	text-align: -ms-left;
+	@media (min-width: 850px) {
+		display: block;
+		text-align: center;
+		text-align: -webkit-center;
+		text-align: -moz-center;
+		text-align: -o-center;
+		text-align: -ms-center;
+	}
+	> ul{
+		margin-bottom:0px;
+	}
+	.side-nav-item {
+		position: relative;
+		> a {
+			color: @gray-dark;
+			cursor: pointer;
+			outline: 0;
+			padding: 10px 20px;
+			display: block;
+			border-bottom: 1px solid @gray;
+			background-color: @white;
+			&:hover {
+				@media (min-width: 850px) {
+				background-color:@brand-primary;
+				color: @white;
+				}
+			}
+			&.active {
+				@media (min-width: 850px) {
+				background-color:@brand-primary;
+				color: @white;
+				}
+			}
+			@media (min-width: 850px) {
+				white-space: normal;
+				cursor: pointer;
+				outline: 0;
+				padding: 20px;
+				display: block;
+				border-bottom: none;
+			}
+		}
+		span {
+			font-size: 20px;
+			margin-bottom: 5px;
+			display: inline;
+			&:hover {
+				color: @white;
+			}
+			@media (min-width: 850px) {
+				font-size: 30px;
+				margin-bottom: 5px;
+				display: block;
+				text-align: center;
+				text-align: -webkit-center;
+				text-align: -moz-center;
+				text-align: -o-center;
+				text-align: -ms-center;
+			}
+		}
+		// The dropdown menu arrow indicator for phone only
+		.menu-arrow-default {
+			display: inline-block;
+			float:right;
+			margin-top:2px;
+			@media (min-width: 850px) {
+			display: none;
+			}
+			> span {
+				font-size: 13px;
+				vertical-align: middle;
+			}
+		}
+		.menu-arrow-open {
+ 		  display: none;
+		}
+	}
+	// The dropdown menu TOP NAV (ul)
+	.side-nav-dropdown-menu {
+		text-align: left;
+		text-align: -webkit-left;
+		text-align: -moz-left;
+		text-align: -o-left;
+		text-align: -ms-left;
+		list-style: none;
+		display: none; // none by default, but block on "open" of the menu
+		background-color: @gray-light;
+		width:100%;
+		@media (min-width: 850px) {
+			width:200px;
+			position: absolute;
+			top: 0;
+			left: 120px;
+			z-index: 0;
+			float: left;
+			white-space:nowrap;
+			padding: 0px;
+			list-style: none;
+			font-size: @font-size-base;
+			background-clip: padding-box;
+    		box-shadow: inset 10px 0 10px -9px rgba(0,0,0,0.4);
+		}
+		.divider {
+			height: 1px;
+			margin:0px;
+			overflow: hidden;
+			border-bottom: 1px solid @gray;
+		}
+		// Links within the dropdown menu
+		> li > a {
+			display: block;
+			padding: 10px 20px;
+			clear: both;
+			font-weight: normal;
+			line-height: @line-height-base;
+			color: @dropdown-link-color;
+			// white-space: nowrap; // prevent links from randomly breaking onto new lines
+			white-space: normal;
+			@media (min-width: 850px) {
+				padding: 15px;
+			}
+		}
+		li {
+		border-left: none;
+		}
+	}
+	.open {
+		// Show the menu
+		> .side-nav-dropdown-menu {
+		display: block;
+		}
+		.menu-arrow-open {
+		   display: inline-block;
+		   float:right;
+		   margin-top:2px;
+		   @media (min-width: 850px) {
+		   display: none;
+		   }
+		   > span {
+			   font-size: 13px;
+			   vertical-align: middle;
+		   }
+		}
+		.menu-arrow-default {
+		   display: none;
+		}
+		// Remove the outline when :focus is triggered
+		> a {
+		  outline: 0;
+		}
+	}
+}
