@@ -3,15 +3,27 @@ body {
 	 position: relative;
 }
 
+
+.page-wrapper {
+	position: relative;
+	padding-top: 83px;
+	height: 100%;
+		padding-top: 0px;
+	@media (min-width: 850px) {
+		padding-top: 83px;
+
+	}
+}
+
 .page-content {
 	float: left;
 	width: 100%;
 	@media (min-width: 850px) {
 	float: none;
 	margin-left: 120px;
-	margin-top: 40px;
 	width: inherit;
 	height: 100vh;
+	margin-top: 30px;
 	}
 }
 
@@ -31,6 +43,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	@media (max-width: 414px) {
 			height: 60px;
+	}
+	@media (min-width: 850px) {
+		position: fixed;
+		top: 0;
 	}
 }
 
