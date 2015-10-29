@@ -442,7 +442,7 @@ button.hamburger {
 	margin-bottom: 20px;
 	@media (min-width: 850px) {
 		margin-bottom: 0px;
-		position: absolute;
+		position: fixed;
 		z-index: 2;
 		height: 100%;
 		width: 120px;
@@ -461,7 +461,6 @@ button.hamburger {
 }
 
 .menu-background {
-	background-color: red;
 	height:100%;
 	width:200px;
 	position: absolute;
@@ -490,7 +489,6 @@ button.hamburger {
 		margin-bottom:0px;
 	}
 	.side-nav-item {
-		position: relative;
 		> a {
 			color: @gray-dark;
 			cursor: pointer;
@@ -568,11 +566,11 @@ button.hamburger {
 		width:100%;
 		@media (min-width: 850px) {
 			width:200px;
+			height: 100%;
 			position: absolute;
 			top: 0;
 			left: 120px;
 			z-index: 2;
-			float: left;
 			white-space:nowrap;
 			padding: 0px;
 			list-style: none;
