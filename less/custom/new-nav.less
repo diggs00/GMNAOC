@@ -50,18 +50,19 @@ body {
 	}
 }
 
+button.hamburger.collapsed,
 button.hamburger {
 	background-image: none;
 	background-color: transparent;
 	border: none;
 	outline: none;
 	/* navigation trigger - visible on mobile devices only */
-	float: right;
+	float: left;
 	position: relative;
 	display: block;
-	width: 34px;
+	width: 45px;
 	height: 44px;
-	margin-right: 20px;
+	margin-right: 11px;
 	padding:20px;
 	/* hide text */
 	overflow: hidden;
@@ -76,18 +77,25 @@ button.hamburger {
 		position: absolute;
 		display: inline-block;
 		height: 3px;
-		width: 24px;
+		width: 25px;
 		background: @gray-dark;
 	}
+}
+
+
+button.hamburger.collapsed {
 	span {
+		/* line in the center */
 		position: absolute;
 		top: 50%;
 		right: 5px;
 		margin-top: -2px;
 	}
 	span::before, span::after {
+		/* other 2 lines */
 		content: '';
 		right: 0;
+		transform: rotate(0deg);
 	}
 	span::before {
 		/* menu icon top line */
@@ -100,11 +108,42 @@ button.hamburger {
 }
 
 
+button.hamburger {
+	span {
+		/* hide line in the center */
+		background-color: rgba(255,0,0,0);
+		position: absolute;
+		top: 50%;
+		right: 5px;
+		margin-top: -2px;
+	}
+	span::before, span::after {
+		content: '';
+		right: -4px;
+	}
+	span::before {
+		/* menu icon top line */
+		top: -6px;
+		transform: rotate(45deg);
+    	transform-origin: 18% 10%;
+	}
+	span::after {
+		/* menu icon bottom line */
+		top: 6px;
+		transform: rotate(-45deg);
+    	transform-origin: 10% 90%;
+	}
+}
+
 
 
 .top-nav-brand {
 	height: 100%;
 	float:left;
+	display: none;
+	@media (min-width: 850px) {
+		display: block;
+	}
 	ul.list-inline{
 		height: 100%;
 		margin-bottom:0px;
