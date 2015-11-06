@@ -45,7 +45,7 @@ body {
 			height: 60px;
 	}
 	@media (min-width: 850px) {
-		// position: fixed;
+		position: fixed;
 		top: 0;
 	}
 }
@@ -208,6 +208,7 @@ button.hamburger {
 	.top-nav-item {
 		position: relative;
 	   top: 50%;
+				height:56px;
 	   transform: translateY(-50%);
 		-webkit-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
@@ -241,12 +242,12 @@ button.hamburger {
 			list-style: none;
 			display: none;
 			background-color: @white;
-			-webkit-box-shadow: -3px 2px 8px -1px rgba(0,0,0,.4);
-    		box-shadow: -3px 2px 8px -1px rgba(0,0,0,.4);
+			-webkit-box-shadow: -3px 5px 5px -1px rgba(0,0,0,.4);
+    		box-shadow: -3px 5px 5px -1px rgba(0,0,0,.4);
 			border-radius:1px;
 			width: 250px;
 			position: absolute;
-			top: 67px;
+			top: 68px;
 			left: 0px;
 			z-index: 0;
 			margin: 2px 0 0; // override default ul
@@ -300,6 +301,7 @@ button.hamburger {
 						img {
 							display: block;
 							margin-bottom: 10px;
+							width:100%;
 						}
 					}
 					p {
@@ -375,6 +377,9 @@ button.hamburger {
 	}
 	.top-nav-item {
 		position: relative;
+		@media (min-width: 850px) {
+			height:82px;
+		}
 		&.active {
 			background: @gray-light;
 		}
@@ -434,7 +439,7 @@ button.hamburger {
 		background-color: @gray-light;
 		@media (min-width: 850px) {
 			position: absolute;
-			top: 99%;
+			top: 81px;
 			right: 0;
 			z-index: 0;
 			display: none; // none by default, but block on "open" of the menu
@@ -603,8 +608,8 @@ button.hamburger {
 			.top-nav-dropdown-menu {
 				list-style: none;
 				background-color: @white;
-				-webkit-box-shadow: -3px 2px 8px -1px rgba(0,0,0,.4);
-				box-shadow: -3px 2px 8px -1px rgba(0,0,0,.4);
+				-webkit-box-shadow: -3px 5px 5px -1px rgba(0,0,0,.4);
+				box-shadow: -3px 5px 5px -1px rgba(0,0,0,.4);
 				border-radius:1px;
 				width: 470px;
 				position: absolute;
