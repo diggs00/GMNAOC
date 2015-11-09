@@ -208,11 +208,14 @@ button.hamburger {
 	.top-nav-item {
 		position: relative;
 	   top: 50%;
-				height:56px;
+		height:37px;
 	   transform: translateY(-50%);
 		-webkit-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
+		@media (min-width: 415px) {
+			height:56px;
+		}
 		a {
 			color: @gray-dark;
 		   white-space: normal;
@@ -247,20 +250,19 @@ button.hamburger {
 			border-radius:1px;
 			width: 250px;
 			position: absolute;
-			top: 68px;
+			top: 46px;
 			left: 0px;
 			z-index: 0;
 			margin: 2px 0 0; // override default ul
 			font-size: @font-size-base;
 			background-clip: padding-box;
-			@media (max-width: 414px) {
-				top: 48px;
-			}
+
 			@media (min-width: 375px) {
 				width: 305px;
 			}
 			@media (min-width: 414px) {
 				width: 340px;
+				top: 68px;
 			}
 			@media (min-width: 768px) {
 				width: 655px;
@@ -399,22 +401,24 @@ button.hamburger {
 				display: block;
 				border-bottom: none;
 			}
-		}
-		span {
-			font-size: 20px;
-			margin-bottom: 5px;
-			display: inline;
-			@media (min-width: 850px) {
+			> span {
 				font-size: 20px;
 				margin-bottom: 5px;
-				display: block;
-				text-align: center;
-				text-align: -webkit-center;
-				text-align: -moz-center;
-				text-align: -o-center;
-				text-align: -ms-center;
+				display: inline;
+				display: none;
+				@media (min-width: 850px) {
+					font-size: 20px;
+					margin-bottom: 5px;
+					display: block;
+					text-align: center;
+					text-align: -webkit-center;
+					text-align: -moz-center;
+					text-align: -o-center;
+					text-align: -ms-center;
+				}
 			}
 		}
+
 		// The dropdown menu arrow indicator for phone only
 		.menu-arrow-default {
 			display: inline-block;
@@ -519,7 +523,7 @@ button.hamburger {
 			margin: 20px 20px;
 			overflow: hidden;
 			&:before {
-				content: '3';
+				content: '';
 				position: absolute;
 				left: 8px;
 				top: 50%;
@@ -781,25 +785,26 @@ button.hamburger {
 				display: block;
 				border-bottom: none;
 			}
-		}
-		span {
-			font-size: 20px;
-			margin-bottom: 5px;
-			display: inline;
-			&:hover {
-				color: @white;
-			}
-			@media (min-width: 850px) {
-				font-size: 30px;
+			> span {
+				font-size: 20px;
 				margin-bottom: 5px;
-				display: block;
-				text-align: center;
-				text-align: -webkit-center;
-				text-align: -moz-center;
-				text-align: -o-center;
-				text-align: -ms-center;
+				display: none;
+				&:hover {
+					color: @white;
+				}
+				@media (min-width: 850px) {
+					font-size: 30px;
+					margin-bottom: 5px;
+					display: block;
+					text-align: center;
+					text-align: -webkit-center;
+					text-align: -moz-center;
+					text-align: -o-center;
+					text-align: -ms-center;
+				}
 			}
 		}
+
 		// The dropdown menu arrow indicator for phone only
 		.menu-arrow-default {
 			display: inline-block;
