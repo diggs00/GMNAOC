@@ -1,0 +1,321 @@
+.top-nav-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	position: fixed;
+	z-index: 2;
+	width:100%;
+	background: @white;
+	height: 60px;
+	border-bottom: 1px solid @gray;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+	-webkit-box-shadow:  0px 1px 10px rgba(0,0,0,0.4);
+	border-radius:1px;
+	-webkit-apperance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@media (min-width: @screen-tablet) {
+		height: 80px;
+	}
+}
+
+.hamburger-menu{
+	height: 60px;
+	cursor: pointer;
+	@media (min-width: @screen-tablet) {
+		display: none;
+	}
+	.hamburger {
+		height: 100%;
+		width: 70px;
+		outline: none;
+		display: block;
+		position: relative;
+		text-indent: -9999px;
+		border-radius: none;
+		border: none;
+		cursor: pointer;
+		background-color: transparent;
+		padding:0px;
+		span {
+			position: absolute;
+			top:28px;
+	      left: 20px;
+	      right: 20px;
+	      height: 4px;
+	      background-color: @gray-dark;
+			background: none; // Hides the middle hamburger line so X shows correctly
+		}
+		span::before, span::after {
+			position: absolute;
+		   display: block;
+		   width: 100%;
+	      background-color: @gray-dark;
+		   content: "";
+			height: 4px;
+		}
+		// Forms the X hamburger
+		>span::before {
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-moz-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+		}
+		>span::after {
+			bottom: 0;
+		   transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+		}
+	}
+	// 3 lined hamburger
+	.hamburger.collapsed {
+		> span {
+			// middle line in hamburger
+	      background-color: @gray-dark;
+		}
+		> span::before {
+			// top line in hamburger
+			top: -8px;
+			transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+		}
+		> span::after {
+			// bottom line in hamburger
+			bottom: -8px;
+			transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-ms-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+		}
+	}
+}
+
+.brand {
+	display: none;
+	@media (min-width: @screen-tablet) {
+		display: block;
+		-webkit-align-self: center;
+		align-self: center;
+		cursor: pointer;
+		padding: 0px 10px;
+	}
+}
+
+.vehicle-container{
+	margin: auto;
+	@media (min-width: @screen-tablet) {
+		margin: 0px auto 0px 0px;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: stretch;
+		align-items: stretch;
+		border-left: 1px solid @gray;
+		border-right: 1px solid @gray;
+		position: relative;
+		text-align: center;
+		cursor: pointer;;
+	}
+	&:hover{
+		background-color: @gray-light;
+		cursor: pointer;
+	}
+	&.active, &.active a{
+		cursor: default;
+		background-color: @gray-light;
+	}
+	.vehicle {
+		-webkit-align-self: center;
+		align-self: center;
+		@media (min-width: @screen-tablet) {
+			padding: 0px 10px;
+		}
+		img {
+			width:80%;
+			@media (min-width: @screen-tablet) {
+				width: initial;
+				margin-bottom:5px;
+			}
+		}
+		p {
+			margin:0px;
+			padding:0px;
+			display: none;
+			color: @text-color;
+			@media (min-width: @screen-tablet) {
+				display: block;
+			}
+		}
+	}
+}
+
+.search-container, .account-container {
+	@media (min-width: @screen-tablet) {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		border-left: 1px solid @gray;
+		cursor: pointer;
+		position: relative;
+		text-align: center;
+		padding:0px 10px;
+		&:hover, a{
+			background-color: @gray-light;
+			cursor: pointer;
+		}
+		&.active, &.active a{
+			cursor: default;
+			background-color: @gray-light;
+		}
+	}
+	.search, .account {
+		span {
+			display: none;
+			@media (min-width: @screen-tablet) {
+				display: block;
+				font-size: 22px;
+				color: @text-color;
+				-webkit-align-self: center;
+				align-self: center;
+			}
+		}
+		p {
+			margin:0px;
+			padding:0px;
+			display: none;
+			@media (min-width: @screen-tablet) {
+				display: block;
+				color: @text-color;
+			}
+		}
+	}
+}
+
+.notifications-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	cursor: pointer;
+	position: relative;
+	width: 60px;
+	@media (min-width: @screen-tablet) {
+		width: initial;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		border-left: 1px solid @gray;
+		cursor: pointer;
+		position: relative;
+		text-align: center;
+		padding:0px 10px;
+		&:hover {
+			background-color: @gray-light;
+		}
+	}
+	.notification {
+		span {
+			display: block;
+			font-size: 22px;
+			color: @text-color;
+			position: relative;
+			@media (min-width: @screen-tablet) {
+				-webkit-align-self: center;
+				align-self: center;
+			}
+		}
+		.note-count {
+			position: absolute;
+			top: 10px;
+			left: 30px;
+			color: @white;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			line-height: 1.5em;
+			background-color: @brand-primary;
+			text-align: center;
+			@media (min-width: @screen-tablet) {
+				top: 11px;
+				left: 48px
+			}
+		}
+		p {
+			margin:0px;
+			padding:0px;
+			display: none;
+			@media (min-width: @screen-tablet) {
+				display: block;
+				color: @text-color;
+			}
+		}
+	}
+}
+
+
+
+.side-nav-container {
+	display: block;
+	float:left;
+	@media (min-width: @screen-tablet) {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-direction: column;
+		flex-direction: column;
+		float: none;
+		position: fixed;
+		z-index: 1;
+		background: @white;
+		height: 100%;
+		width: 120px;
+		-webkit-box-shadow: 6px -5px 11px -5px rgba(0,0,0,0.4);
+		box-shadow: 6px -5px 11px -5px rgba(0,0,0,0.4);
+		border-radius:1px;
+		-webkit-font-smoothing: antialiased;
+		margin-top: 80px;
+	}
+}
+
+a.side-nav-item-container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	width: 100%;
+	cursor: pointer;
+	text-align: center;
+	height: 90px;
+	border-bottom: 1px solid @gray;
+	color: @text-color;
+	&:hover {
+		background-color: @brand-primary;
+		color: @white;
+	}
+	.side-nav-item {
+		span {
+			font-size: 30px;
+
+		}
+		p {
+			margin:0px;
+		}
+	}
+}
