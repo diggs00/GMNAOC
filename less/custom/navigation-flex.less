@@ -239,7 +239,10 @@
 				img {
 					width:65%;
 					@media (min-width: @screen-tablet) {
-						width: 120px;
+							width: 130px;
+					}
+					@media (min-width: 825px) {
+							width: 150px;
 					}
 				}
 				p {
@@ -778,17 +781,17 @@
 			display: none;
 			width: 100%;
 			background-color: @gray-light;
-			padding: 15px 20px 15px 30px;
 			.title {
+				padding: 15px 20px 5px 30px;
 				h5 {
 					margin-bottom: 0px;
 				}
 			}
-			ul.content {
+			.content {
 				a {
-					padding: 15px 0px;
+				padding: 10px 20px 15px 30px;
 					&:last-child {
-						padding-bottom: 0px;
+						padding-bottom: 10px;
 					}
 				}
 			}
