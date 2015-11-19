@@ -586,6 +586,38 @@ background: linear-gradient(to bottom, @brand-primary-light 0%, @brand-primary-d
 }
 
 
+.button-variant-blue(@color; @background; @border) {
+  color: @white;
+  background-color: @background;
+  border: 1px solid @border;
+
+  &:hover,
+  .open .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 8%);
+    border-color: darken(@border, 0%);
+  }
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: @color;
+    background-image: none;
+    background-color: @onstar;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border
+    }
+  }
+}
 
 
 

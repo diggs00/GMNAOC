@@ -13,72 +13,176 @@
    </div>
 
    <div class="vehicle-container">
-      <div class="vehicle">
+      <div class="vehicle-current" data-toggle="dropdown">
          <a href="#0">
             <img src="img/vehicle.png"/>
             <p>My 2016 Cadillac CTS</p>
          </a>
       </div>
+      <div class="dropdown-container">
+         <div class="title">
+            <h5>Your Vehicles</h5>
+            <a class="icon-ui-close" href=""></a>
+         </div>
+         <ul class="content">
+            <li class="vehicle active">
+               <a href="#0">
+                  <img src="https://media.carbook.com/MediaGallery/media/Mjk4NTQ2Xk1lZGlhIEdhbGxlcnk/Cmoe19M4YLsv40HdPGfyJC9XSEVttXsoW2pXYnOf5nfFkOa4j6-V4qVLJ57sjFwaqu9OhgWt8DI/cc_2012CHE023a_01_640_GAN.png" >
+                  <p>2015 Vehicle Name</p>
+                  <p>VIN: 1234567890</p>
+               </a>
+            </li>
+            <li class="vehicle hover">
+               <a href="#0">
+                  <img src="https://media.carbook.com/MediaGallery/media/Mjk4NTQ2Xk1lZGlhIEdhbGxlcnk/Cmoe19M4YLsv40HdPGfyJC9XSEVttXsoW2pXYnOf5nfFkOa4j6-V4qVLJ57sjFwaqu9OhgWt8DI/cc_2012CHE023a_01_640_GAN.png" >
+                  <p>2015 Vehicle Name</p>
+                  <p>VIN: 1234567890</p>
+               </a>
+            </li>
+            <li class="vehicle">
+               <a href="#0">
+                  <img src="https://media.carbook.com/MediaGallery/media/Mjk4NTQ2Xk1lZGlhIEdhbGxlcnk/Cmoe19M4YLsv40HdPGfyJC9XSEVttXsoW2pXYnOf5nfFkOa4j6-V4qVLJ57sjFwaqu9OhgWt8DI/cc_2012CHE023a_01_640_GAN.png" >
+                  <p>2015 Vehicle Name</p>
+                  <p>VIN: 1234567890</p>
+               </a>
+            </li>
+            <li class="actions">
+               <ul>
+                  <li>
+                     <button type="button" class="btn btn-default ng-isolate-scope" data-ng-click="openAddVehicle()" data-gm-track-link="MiniGarage:AddVehicle" data-track-delay="true" data-track-type="o" data-prop10="MiniGarage:Button:Add Vehicle">
+                     View All
+                     </button>
+                     <button type="button" class="btn btn-blue ng-isolate-scope" data-ng-click="openAddVehicle()" data-gm-track-link="MiniGarage:AddVehicle" data-track-delay="true" data-track-type="o" data-prop10="MiniGarage:Button:Add Vehicle">
+                     <span aria-hidden="true" class="icon-ui-adddot"></span>
+                     Add Vehicle
+                     </button>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </div>
    </div>
 
+
    <div class="notifications-container">
-      <div class="notification">
+      <div class="notification" data-toggle="dropdown">
          <a href="#0">
             <span class="icon-newnav-notification"></span>
             <div class="note-count">20</div>
             <p>Notifications</p>
          </a>
+      </div>
+      <div class="dropdown-container">
+         <div class="title">
+            <h5>Notifications</h5>
+            <a class="icon-ui-close" href=""></a>
+         </div>
+         <ul class="content">
+            <li class="note">
+               <a href="#0">
+                  <span aria-hidden="true" class="icon-graphic-messages"></span>
+                  <ul>
+                     <li>
+                        <p><strong>2012 Chevrolet Volt</strong></p>
+                     </li>
+                     <li>
+                        <p>Lorem ipsum</p>
+                     </li>
+                  </ul>
+               </a>
+            </li>
+            <li class="note">
+               <a href="#0">
+                  <span aria-hidden="true" class="icon-graphic-messages"></span>
+                  <ul>
+                     <li>
+                        <p><strong>2012 Chevrolet Volt</strong></p>
+                     </li>
+                     <li>
+                        <p>Lorem ipsum</p>
+                     </li>
+                  </ul>
+               </a>
+            </li>
+            <li class="note read">
+               <a href="#0">
+                  <span aria-hidden="true" class="icon-graphic-messagesopen"></span>
+                  <ul>
+                     <li>
+                        <p><strong>2012 Chevrolet Volt</strong></p>
+                     </li>
+                     <li>
+                        <p>Lorem ipsum</p>
+                     </li>
+                  </ul>
+               </a>
+            </li>
+            <li class="actions">
+               <ul>
+                  <li>
+                     <button type="button" class="btn btn-link noWrap addVehicleBtn ng-isolate-scope" data-ng-click="openAddVehicle()" data-gm-track-link="MiniGarage:AddVehicle" data-track-delay="true" data-track-type="o" data-prop10="MiniGarage:Button:Add Vehicle">
+                     See all notifications
+                     </button>
+                  </li>
+               </ul>
+            </li>
+         </ul>
       </div>
    </div>
 
    <div class="right-menu-container">
-      <ul>
-         <li class="right-menu-item">
+      <div class="search-container">
+         <div class="search" data-toggle="dropdown">
             <a href="#0">
-               <div>
-                  <span class="icon-ui-search"></span>
-                  <p>Search</p>
-               </div>
+               <span class="icon-ui-search"></span>
+               <p>Search</p>
             </a>
-         </li>
-         <li class="right-menu-item">
+         </div>
+
+         <div class="search-dropdown-container">
+            <div class="title">
+               <h5>Search</h5>
+               <a class="icon-ui-close" href=""></a>
+            </div>
+            <ul class="content">
+               <li class="search-form">
+                  <input type="text" class="form-control">
+                  <button type="submit" class="btn btn-blue">Search</button>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <div class="account-container">
+         <div class="account" data-toggle="dropdown">
             <a href="#0">
                <span class="icon-ui-account"></span>
                <p>Account</p>
             </a>
-         </li>
-      </ul>
-   </div>
+         </div>
 
-   <!-- <div class="search-container">
-      <div class="search">
-         <a href="#0">
-            <span class="icon-ui-search"></span>
-            <p>Search</p>
-         </a>
+         <div class="account-dropdown-container">
+            <div class="title">
+               <h5>John Doe</h5>
+               <a class="icon-ui-close" href=""></a>
+            </div>
+            <ul class="content">
+               <li>
+                  <a href="0">Personal Info</a>
+               </li>
+               <li>
+                  <a href="0">Service & Accounts</a>
+               </li>
+               <li>
+                  <a href="0">Logout</a>
+               </li>
+            </ul>
+         </div>
       </div>
    </div>
 
-   <div class="notifications-container">
-      <div class="notification">
-         <a href="#0">
-            <span class="icon-newnav-notification"></span>
-            <div class="note-count">20</div>
-            <p>Notifications</p>
-         </a>
-      </div>
-   </div>
 
-   <div class="account-container">
-      <div class="account">
-         <a href="#0">
-            <span class="icon-ui-account"></span>
-            <p>Account</p>
-         </a>
-      </div>
-   </div> -->
-
-</div>
+</div> <!-- END TOP NAV CONTAINER -->
 
 
 <div class="side-nav-container">
@@ -96,95 +200,58 @@
          </a>
       </li>
    </ul>
+</div><!-- END SIDE NAV CONTAINER -->
+
+
+<div class="mobile-menu collapse" id="bs-example-navbar-collapse-1">
+   <div class="mobile-menu-container">
+      <ul>
+         <li class="mobile-menu-item">
+            <div class="search">
+               <input type="text" class="form-control" placeholder="Search...">
+            </div>
+         </li>
+         <li class="mobile-menu-item">
+            <a href="#0" data-toggle="dropdown">
+               Account
+               <div class="menu-arrow-default">
+                  <span class="icon-ui-arrowdown"></span>
+               </div>
+               <div class="menu-arrow-open">
+                  <span class="icon-ui-arrowup"></span>
+               </div>
+            </a>
+            <div class="mobile-menu-item-dropdown">
+               <div class="title">
+                  <h5>John Doe</h5>
+               </div>
+               <ul class="content">
+                  <li>
+                     <a href="0">Personal Info</a>
+                  </li>
+                  <li>
+                     <a href="0">Service & Accounts</a>
+                  </li>
+                  <li>
+                     <a href="0">Logout</a>
+                  </li>
+               </ul>
+            </div>
+         </li>
+      </ul>
+   </div>
 </div>
 
 
-
-   <div class="top-nav-items-right collapse" id="bs-example-navbar-collapse-1">
-      <ul class="list-inline">
+<!-- <div class="page-wrapper">
+<div class="side-nav">
+   <div class="side-nav-items collapse" id="bs-example-navbar-collapse-2">
+      <ul>
          <li>
-            <div class="top-nav-item">
-               <div class="search">
-                  <a href="#0" data-toggle="dropdown">
-                     <span class="icon-newnav-search"></span>
-                     Search
-                  </a>
-                  <ul class="top-nav-dropdown-menu">
-                     <li><input type="text" class="form-control" placeholder="Search..."></li>
-                  </ul>
-                  <input type="text" class="form-control" placeholder="Search...">
-               </div>
-            </div>
-         </li><li>
-            <div class="top-nav-item active">
-               <div class="notifications">
-                  <a href="#0" data-toggle="dropdown">
-                     <span class="icon-newnav-notification"></span>
-                     <div class="note-count">20</div>
-                     Notifications
-                  </a>
-                  <div class="top-nav-dropdown-menu">
-                     <div class="title">
-                        <h5>
-                           Notifications
-                        </h5>
-                        <a class="icon-ui-close" href=""></a>
-                     </div>
-                     <div class="body">
-                        <div class="container">
-                           <div class="row">
-                              <ul class="notes">
-                                 <li class="col-xs-12">
-                                    <div class="note">
-                                       <span aria-hidden="true" class="icon-graphic-messages"></span>
-                                       <p><strong>2012 Chevrolet Volt</strong></p>
-                                       <p>Lorem ipsum</p>
-                                    </div>
-                                 </li>
-                                 <li class="col-xs-12">
-                                    <div class="note">
-                                       <span aria-hidden="true" class="icon-graphic-messages"></span>
-                                       <p><strong>2012 Chevrolet Volt</strong></p>
-                                       <p>Lorem ipsum</p>
-                                    </div>
-                                 </li>
-                                 <li class="col-xs-12">
-                                    <div class="note read">
-                                       <span aria-hidden="true" class="icon-graphic-messagesopen"></span>
-                                       <p><strong>2012 Chevrolet Volt</strong></p>
-                                       <p>Lorem ipsum</p>
-                                    </div>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="footer">
-                        <button type="button" class="btn btn-link noWrap addVehicleBtn ng-isolate-scope" data-ng-click="openAddVehicle()" data-gm-track-link="MiniGarage:AddVehicle" data-track-delay="true" data-track-type="o" data-prop10="MiniGarage:Button:Add Vehicle">
-                        See all notifications
-                        </button>
-                     </div>
-                  </div>
-               </div>
-               <div class="notifications-mobile">
-                  <a href="#0">
-                     Notifications
-                     <div class="note-count">20</div>
-                  </a>
-               </div>
-            </div>
-         </li><li>
-            <div class="top-nav-item">
-               <a href="#0">
-                  <span class="icon-newnav-key"></span>
-                  Commands
-               </a>
-            </div>
-         </li><li>
-            <div class="top-nav-item">
+            <div class="side-nav-item">
                <a href="#0" data-toggle="dropdown">
-                  <span class="icon-newnav-account"></span>
-                  Account
+                  <span class="icon-newnav-vehicle"></span>
+                  Vehicle
                   <div class="menu-arrow-default">
                      <span class="icon-ui-arrowdown"></span>
                   </div>
@@ -192,126 +259,81 @@
                      <span class="icon-ui-arrowup"></span>
                   </div>
                </a>
-               <div class="top-nav-dropdown-menu">
-                  <div class="title">
-                     <h5>
-                        Brandon Cool
-                     </h5>
-                     <a class="icon-ui-close" href=""></a>
+               <ul class="side-nav-dropdown-menu">
+                  <li><a href="#0">Overview</a></li>
+                  <li><a href="#0">Learn</a></li>
+                  <li><a href="#0">Preferences</a></li>
+                  <li><a href="#0">Smart Driver Long menu item will wrap</a></li>
+               </ul>
+            </div>
+         </li>
+         <li>
+            <div class="side-nav-item">
+               <a href="#0" data-toggle="dropdown" class="active">
+                  <span class="icon-newnav-clipboard"></span>
+                  Maintenance
+                  <div class="menu-arrow-default">
+                     <span class="icon-ui-arrowdown"></span>
                   </div>
-                  <div class="body">
-                     <div class="container">
-                        <div class="row">
-                           <ul class="top-nav-dropdown-menu">
-                              <li><a href="#0">Overview</a></li>
-                              <li><a href="#0">Personal Information</a></li>
-                              <li><a href="#0">Services and Accounts</a></li>
-                              <li><a href="#0">Communication Preferences</a></li>
-                              <li><a href="#0">Opt-in Programs</a></li>
-                              <li class="divider"></li>
-                              <li><a href="#0">Log Out</a></li>
-                           </ul>
-                        </div>
-                     </div>
+                  <div class="menu-arrow-open">
+                     <span class="icon-ui-arrowup"></span>
                   </div>
-               </div>
+               </a>
+               <ul class="side-nav-dropdown-menu">
+                  <li><a href="#0">Home</a></li>
+                  <li><a href="#0">Settings</a></li>
+                  <!-- <li class="divider"></li> -->
+                  <!-- <li><a href="#0">Shop</a></li>
+                  <li><a href="#0">About</a></li>
+                  <li><a href="#0">Help</a></li>
+               </ul>
+            </div>
+         </li>
+         <li>
+            <div class="side-nav-item">
+               <a href="#0">
+                  <span class="icon-newnav-map"></span>
+                  Navigation
+               </a>
+            </div>
+         </li>
+         <li>
+            <div class="side-nav-item">
+               <a href="#0">
+                  <span class="icon-newnav-shop"></span>
+                  Collection
+               </a>
+            </div>
+         </li>
+         <li>
+            <div class="side-nav-item">
+               <a href="#0">
+                  <span class="icon-newnav-onstar"></span>
+                  OnStar
+               </a>
+            </div>
+         </li>
+         <li>
+            <div class="side-nav-item">
+               <a href="#0" data-toggle="dropdown" class="active">
+                  <span class="icon-newnav-help"></span>
+                  Help
+                  <div class="menu-arrow-default">
+                     <span class="icon-ui-arrowdown"></span>
+                  </div>
+                  <div class="menu-arrow-open">
+                     <span class="icon-ui-arrowup"></span>
+                  </div>
+               </a>
+               <ul class="side-nav-dropdown-menu">
+                  <li><a href="#0">Overview</a></li>
+                  <li><a href="#0">Learn</a></li>
+               </ul>
             </div>
          </li>
       </ul>
    </div>
-</div>
-
-<div class="page-wrapper">
-   <div class="side-nav">
-      <div class="side-nav-items collapse" id="bs-example-navbar-collapse-2">
-         <ul>
-            <li>
-               <div class="side-nav-item">
-                  <a href="#0" data-toggle="dropdown">
-                     <span class="icon-newnav-vehicle"></span>
-                     Vehicle
-                     <div class="menu-arrow-default">
-                        <span class="icon-ui-arrowdown"></span>
-                     </div>
-                     <div class="menu-arrow-open">
-                        <span class="icon-ui-arrowup"></span>
-                     </div>
-                  </a>
-                  <ul class="side-nav-dropdown-menu">
-                     <li><a href="#0">Overview</a></li>
-                     <li><a href="#0">Learn</a></li>
-                     <li><a href="#0">Preferences</a></li>
-                     <li><a href="#0">Smart Driver Long menu item will wrap</a></li>
-                  </ul>
-               </div>
-            </li>
-            <li>
-               <div class="side-nav-item">
-                  <a href="#0" data-toggle="dropdown" class="active">
-                     <span class="icon-newnav-clipboard"></span>
-                     Maintenance
-                     <div class="menu-arrow-default">
-                        <span class="icon-ui-arrowdown"></span>
-                     </div>
-                     <div class="menu-arrow-open">
-                        <span class="icon-ui-arrowup"></span>
-                     </div>
-                  </a>
-                  <ul class="side-nav-dropdown-menu">
-                     <li><a href="#0">Home</a></li>
-                     <li><a href="#0">Settings</a></li>
-                     <!-- <li class="divider"></li> -->
-                     <li><a href="#0">Shop</a></li>
-                     <li><a href="#0">About</a></li>
-                     <li><a href="#0">Help</a></li>
-                  </ul>
-               </div>
-            </li>
-            <li>
-               <div class="side-nav-item">
-                  <a href="#0">
-                     <span class="icon-newnav-map"></span>
-                     Navigation
-                  </a>
-               </div>
-            </li>
-            <li>
-               <div class="side-nav-item">
-                  <a href="#0">
-                     <span class="icon-newnav-shop"></span>
-                     Collection
-                  </a>
-               </div>
-            </li>
-            <li>
-               <div class="side-nav-item">
-                  <a href="#0">
-                     <span class="icon-newnav-onstar"></span>
-                     OnStar
-                  </a>
-               </div>
-            </li>
-            <li>
-               <div class="side-nav-item">
-                  <a href="#0" data-toggle="dropdown" class="active">
-                     <span class="icon-newnav-help"></span>
-                     Help
-                     <div class="menu-arrow-default">
-                        <span class="icon-ui-arrowdown"></span>
-                     </div>
-                     <div class="menu-arrow-open">
-                        <span class="icon-ui-arrowup"></span>
-                     </div>
-                  </a>
-                  <ul class="side-nav-dropdown-menu">
-                     <li><a href="#0">Overview</a></li>
-                     <li><a href="#0">Learn</a></li>
-                  </ul>
-               </div>
-            </li>
-         </ul>
-      </div>
-   </div>
+</div> -->
 
 
 </div>
