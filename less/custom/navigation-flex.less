@@ -819,16 +819,11 @@
 .mobile-menu-item {
 	margin: 0px;
 	width: 100%;
-	// display: -webkit-flex;
-	// display: flex;
-	// -webkit-flex-direction: column;
-	// flex-direction: column;
-	display: block;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 	li {
-		// display: -webkit-flex;
-		// display: flex;
-		// -webkit-flex-direction: column;
-		// flex-direction: column;
 		display: block;
 		border-bottom: 1px solid @gray;
 		width:100%;
@@ -857,11 +852,6 @@
 			   display: none;
 			}
 		}
-		// &.open {
-		// 	a {
-		// 		color: @brand-primary;
-		// 	}
-		// }
 	}
 	.search {
 		width: 100%;
@@ -891,43 +881,43 @@
 	}
 
 
-	@media (max-width: @screen-xs-max) {
-	// Dropdowns get custom display when collapsed
-		.open .dropdown-menu {
-			position: relative;
-			display: block;
-			float: none;
-			width: 100%;
-			margin-top: 0;
-			background-color: @gray-light;
-			border: 0;
-			box-shadow: none;
-			padding:0px 0px 0px 0px;
-			>li {
-				border :0px;
-			}
-			>li.title {
-				padding: 15px 15px 15px 30px;
-				h5 {
-					margin-bottom: 0px;
-				}
-			}
-			> li > a {
-		     padding: 15px 15px 15px 30px;
-		     clear: both;
-		     font-weight: bold;
-		     color: @text-color;
-		     white-space: nowrap; // prevent links from randomly breaking onto new lines
-			  &:hover,
-	   	  &:focus {
-	   	    text-decoration: none;
-	   	    color: @brand-primary;
-	   	    background-color: transparent;
-	   	  }
-		   }
+
+// Dropdowns get custom display when collapsed
+	.open .dropdown-menu {
+		position: relative;
+		display: block;
+		float: none;
+		width: 100%;
+		margin-top: 0;
+		background-color: @gray-light;
+		border: 0;
+		box-shadow: none;
+		padding:0px 0px 0px 0px;
+		>li {
+			border :0px;
 		}
+		>li.title {
+			padding: 15px 15px 15px 30px;
+			h5 {
+				margin-bottom: 0px;
+			}
+		}
+		> li > a {
+	     padding: 15px 15px 15px 30px;
+	     clear: both;
+	     font-weight: bold;
+	     color: @text-color;
+	     white-space: nowrap; // prevent links from randomly breaking onto new lines
+		  &:hover,
+   	  &:focus {
+   	    text-decoration: none;
+   	    color: @brand-primary;
+   	    background-color: transparent;
+   	  }
+	   }
 	}
 }
+
 
 
 // .mobile-menu {
