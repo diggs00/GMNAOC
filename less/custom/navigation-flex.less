@@ -844,13 +844,12 @@
 			}
 		}
 		li {
-			padding:15px 20px;
 			border-bottom: 1px solid @gray;
 			a {
 				display: -webkit-flex;
 				display: flex;
 				color: @text-color;
-				padding: 0px;
+				padding: 15px 20px;
 				.menu-arrow-default, .menu-arrow-open {
 					margin: 0px 0px 0px auto;
 				}
@@ -868,6 +867,20 @@
 				}
 				.menu-arrow-default {
 					display: none;
+				}
+			}
+			ul.dropdown-menu {
+				padding:0px;
+				li {
+					border: 0px;
+					background-color: @gray-light;
+					a {
+						padding-left:35px;
+					}
+				}
+				li.title h5 {
+					padding: 15px 20px;
+					margin: 0px;
 				}
 			}
 		}
