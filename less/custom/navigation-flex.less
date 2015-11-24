@@ -845,7 +845,31 @@
 		}
 		li {
 			padding:15px 20px;
-			border-bottom: 1px solid red;
+			border-bottom: 1px solid @gray;
+			a {
+				display: -webkit-flex;
+				display: flex;
+				color: @text-color;
+				padding: 0px;
+				.menu-arrow-default, .menu-arrow-open {
+					margin: 0px 0px 0px auto;
+				}
+				.menu-arrow-open {
+					color: @brand-primary;
+					display: none;
+				}
+			}
+			&.open {
+				.menu-arrow-open {
+					display: block;
+					@media (min-width: 850px) {
+					display: none;
+					}
+				}
+				.menu-arrow-default {
+					display: none;
+				}
+			}
 		}
 	}
 }
