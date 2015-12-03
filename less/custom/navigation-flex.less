@@ -25,7 +25,7 @@
 .top-nav-container {
 	display: -webkit-flex;
 	display: flex;
-
+	position: fixed;
 	z-index: 2;
 	width:100%;
 	background: @white;
@@ -240,12 +240,16 @@
 			padding: 0px 15px 15px 15px;
 			text-align: center;
 			margin: 0px;
+    		overflow-y: scroll;
+			height: 350px;
 			@media (min-width: @screen-tablet) {
+				overflow: hidden;
 				padding: 15px;
 				display: -webkit-flex;
 				display: flex;
 				-webkit-flex-direction: row;
 				flex-direction: row;
+				height: initial;
 			}
 			li.vehicle {
 				display: -webkit-flex;
