@@ -233,15 +233,15 @@
 			}
 		}
 		ul.content {
-			display: block;
+			display: flex;
+			-webkit-flex-direction: column;
+			flex-direction: column;
 			padding: 15px;
-			text-align: center;
+			max-height: 350px;
+			overflow-y: scroll;
 			margin: 0px;
-    		overflow-y: scroll;
-			height: 350px;
 			@media (min-width: @screen-tablet) {
-				overflow: hidden;
-				padding: 15px;
+				overflow-y: hidden;
 				display: -webkit-flex;
 				display: flex;
 				-webkit-flex-direction: row;
@@ -249,23 +249,28 @@
 				height: initial;
 			}
 			li.vehicle {
-				display: block;
 				margin-bottom:15px;
+				display: -webkit-flex;
+				display: flex;
+				justify-content: center;
 				@media (min-width: @screen-tablet) {
+					display: -webkit-flex;
+					display: flex;
+					background-color:pink;
 					margin-right: 15px;
 					margin-top: 0px;
 					margin-bottom:0px;
 				}
-
 				a {
 					padding:15px;
 					display: inline-block;
-					&:hover {
+					&:hover  {
 						margin: -1px;
 						border: 1px solid @gray-darker;
 					}
-					&.active {
-						margin: 1px;
+					&.active  {
+						cursor:default;
+						margin: -1px;
 						border: 1px solid @gray-darker;
 					}
 					img {
