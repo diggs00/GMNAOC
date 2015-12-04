@@ -25,10 +25,14 @@
 .top-nav-container {
 	display: -webkit-flex;
 	display: flex;
-	position: fixed;
+	position:fixed;
+     top:0px;
+     left:0px;
+     -webkit-backface-visibility:hidden; /*Most Important*/
 	z-index: 2;
 	width:100%;
 	background: @white;
+	     background:red;
 	min-height: 60px;
 	box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
 	-webkit-box-shadow:  0px 1px 10px rgba(0,0,0,0.4);
