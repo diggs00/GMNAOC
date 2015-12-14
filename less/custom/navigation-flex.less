@@ -1,7 +1,7 @@
 
 
 .page-content-text {
-	padding-top: 30px;
+   margin-top: 80px;
 	float: left;
 	@media (min-width: @screen-tablet) {
 	float: none;
@@ -144,6 +144,24 @@
 	display: block;
 }
 
+
+.center-container{
+	margin: 0px auto;
+	display: -webkit-flex;
+	display: flex;
+	text-align: center;
+	@media (min-width: @screen-tablet) {
+		margin: 0px auto 0px 0px;
+	}
+	.brand-current {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+   }
+}
 
 
 .vehicle-container{
@@ -336,7 +354,7 @@
 	.notification {
 		display: -webkit-flex;
 		display: flex;
-			cursor: pointer;
+		cursor: pointer;
 		-webkit-align-items: center;
 		align-items: center;
 		padding-bottom: 1px;
@@ -359,6 +377,58 @@
 		a {
 			color: @text-color;
 			padding: 0px 20px;
+			@media (min-width: @screen-tablet) {
+				padding: 0px 10px;
+			}
+			span {
+				font-size: 20px;
+			}
+			p {
+				display: none;
+				margin:0px;
+				padding:0px;
+				@media (min-width: @screen-tablet) {
+					display: block;
+				}
+			}
+			.note-count {
+				position: absolute;
+				top: 10px;
+				left: 30px;
+				color: @white;
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				line-height: 1.5em;
+				background-color: @brand-primary;
+				text-align: center;
+				@media (min-width: @screen-tablet) {
+					top: 11px;
+					left: 48px
+				}
+			}
+		}
+	}
+   .notification.static {
+		display: -webkit-flex;
+		display: flex;
+		cursor: pointer;
+		-webkit-align-items: center;
+		align-items: center;
+      cursor: default;
+      padding-bottom: 1px;
+      margin-bottom: -1px;
+      &:hover {
+         background-color: initial;
+         a {
+            cursor: default;
+			}
+		}
+		a {
+         cursor: default;
+			color: @text-color;
+			padding: 0px 20px;
+         background-color: blue;
 			@media (min-width: @screen-tablet) {
 				padding: 0px 10px;
 			}
@@ -741,6 +811,9 @@
 
 
 .mobile-menu, .mobile-menu.collapse {
+	margin-top: 60px;
+    float: left;
+    width: 100%;
 	@media (min-width: @screen-tablet) {
 		display: none;
 	}
